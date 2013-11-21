@@ -6,8 +6,7 @@
 var express = require('express'),
 	routes = require('./routes'),
 	http = require('http'),
-	path = require('path'),
-	expressValidator = require('express-validator');
+	path = require('path');
 
 var app = express();
 
@@ -20,7 +19,6 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(expressValidator());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
