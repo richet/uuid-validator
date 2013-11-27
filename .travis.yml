@@ -1,7 +1,10 @@
 language: node_js
-node_js:
-  - "0.10"
-deploy:
+node_js: 
+- "0.10"
+deploy: 
   provider: heroku
-  api_key: jwVjOqa/pJlFAmssZnyaGXb1Mwe25PRbiQGPk3A8pVfBBluF7mkv+wotUDGTrCwd6ch/iZR8CyAGtUo2Ezqo6B4+gAJ+HLiSbYzVvbJJayWAGMxHS0mbP9Eom07cSbUdb9hRw9GtBdqRyK3D8/hIudDUTRoR6AAhalhdEh8xNb8=
+  api_key: 
+    secure: WikZlStuhAe1lZ5bnshbnK52TPbM3uoummlLXG2lgvfZZIhnbmnYKby3hhbGJnMEaLdO3Triq7B5z2w8dK8P45X5cQcYegkJaZgFJIlviH8E0RsaTNNU6RNw1hkLklN7ROxUHFFjU+MhjLN1RIkkg7mcsVTYQVLskT180rAy29Q=
   app: uuid-validator
+  "on": 
+    repo: richet/uuid-validator
