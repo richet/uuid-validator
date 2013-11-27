@@ -1,15 +1,7 @@
 language: node_js
 node_js:
   - "0.10"
-env: 
-  global: 
-    secure: jwVjOqa/pJlFAmssZnyaGXb1Mwe25PRbiQGPk3A8pVfBBluF7mkv+wotUDGTrCwd6ch/iZR8CyAGtUo2Ezqo6B4+gAJ+HLiSbYzVvbJJayWAGMxHS0mbP9Eom07cSbUdb9hRw9GtBdqRyK3D8/hIudDUTRoR6AAhalhdEh8xNb8=
-after_success:
-  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  - git remote add heroku git@heroku.com:uuid-validator.git
-  - echo "Host heroku.com" >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - echo "   CheckHostIP no" >> ~/.ssh/config
-  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  - yes | heroku keys:add
-  - yes | git push heroku master
+deploy:
+  provider: heroku
+  api_key: jwVjOqa/pJlFAmssZnyaGXb1Mwe25PRbiQGPk3A8pVfBBluF7mkv+wotUDGTrCwd6ch/iZR8CyAGtUo2Ezqo6B4+gAJ+HLiSbYzVvbJJayWAGMxHS0mbP9Eom07cSbUdb9hRw9GtBdqRyK3D8/hIudDUTRoR6AAhalhdEh8xNb8=
+  app: uuid-validator
